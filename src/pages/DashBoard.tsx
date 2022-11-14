@@ -12,6 +12,7 @@ import {
   StyledCardCryptoDetails,
   StyledCardCryptoGraph,
 } from "../components/styled/CardCrypto.styled";
+import SeeMore from "../components/SeeMore";
 
 interface DataProps {
   name: string;
@@ -80,6 +81,8 @@ function DashBoard() {
             </Card>
           </div>
         ))}
+
+        <SeeMore />
       </section>
     </StyledDashboard>
   );
