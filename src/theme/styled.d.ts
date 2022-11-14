@@ -13,7 +13,8 @@ declare module "styled-components" {
       text900: string;
       text700: string;
 
-      green500: string;
+      green500: string; // primary color
+      blue500: string; // secondary color
       pink500: string;
     };
   }
