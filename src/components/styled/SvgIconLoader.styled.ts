@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-interface ThisProps {
+interface SvgStyledProps {
   variant?: string;
 }
-export const SvgStyled = styled.div<ThisProps>`
+export const SvgStyled = styled.div<SvgStyledProps>`
   width: fit-content;
   height: fit-content;
   background-color: ${({ theme, variant }) =>
