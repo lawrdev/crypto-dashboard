@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     :root {
-        font-family: 'DM Sans', 'Inter', 'Avenir', 'Helvetica', 'Arial', sans-serif;
+        font-family: 'Poppins', 'Inter', 'Avenir', 'Helvetica', 'Arial', sans-serif;
 
         font-synthesis: none;
         text-rendering: optimizeLegibility;
