@@ -12,10 +12,17 @@ declare module "styled-components" {
 
       text900: string;
       text700: string;
+      text400: string;
 
-      green500: string; // primary color
+      green500: string; // primary color & gain color
+      green700: string;
       blue500: string; // secondary color
-      pink500: string;
+      blue700: string;
+
+      pink500: string; // loss color
+
+      purple500: string;
+      purple700: string;
     };
   }
 }
