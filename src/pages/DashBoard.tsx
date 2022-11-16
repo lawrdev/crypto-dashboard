@@ -11,8 +11,12 @@ import {
   StyledCardCryptoGrowth,
   StyledCardCryptoDetails,
   StyledCardCryptoGraph,
-} from "../components/styled/CardCrypto.styled";
+} from "../components/styled/Cards/CardCrypto.styled";
 import SeeMore from "../components/SeeMore";
+import MarketOverview from "../components/MarketOverview";
+import Balances from "../components/Balances";
+import RecentActivities from "../components/RecentActivities";
+import Team from "../components/Team";
 
 interface DataProps {
   name: string;
@@ -43,7 +47,7 @@ function DashBoard() {
       <section>
         {data.map((item, index: number) => (
           <div className="my-4" key={index}>
-            <Card variant="crypto">
+            <Card variant="default">
               <StyledCardCrypto>
                 <StyledCardCryptoDetails>
                   <div>
@@ -83,6 +87,22 @@ function DashBoard() {
         ))}
 
         <SeeMore />
+      </section>
+
+      <section>
+        <MarketOverview />
+      </section>
+
+      <section>
+        <Balances />
+      </section>
+
+      <section>
+        <RecentActivities />
+      </section>
+
+      <section>
+        <Team />
       </section>
     </StyledDashboard>
   );
