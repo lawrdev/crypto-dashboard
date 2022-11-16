@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 interface StyledButtonProps {
-  $color: "primary" | "secondary"; //primary(green500) or seondary(blue500)
+  $color: "primary" | "secondary" | "team_admin"; //primary(green500), seondary(blue500), team_admin(purple500)
 }
 export const StyledButton = styled.button<StyledButtonProps>`
   background-color: ${(props) =>
     props.$color === "primary"
       ? props.theme.colors.green500
-      : props.theme.colors.blue500};
+      : props.$color === "secondary"
+      ? props.theme.colors.blue500
+      : props.theme.colors.purple500};
   padding: 10px 9.5px;
   display: flex;
   align-items: center;
@@ -31,7 +33,9 @@ export const StyledButton = styled.button<StyledButtonProps>`
     background-color: ${(props) =>
       props.$color === "primary"
         ? props.theme.colors.green700
-        : props.theme.colors.blue700};
+        : props.$color === "secondary"
+        ? props.theme.colors.blue700
+        : props.theme.colors.purple700};
   }
 
   &:active {

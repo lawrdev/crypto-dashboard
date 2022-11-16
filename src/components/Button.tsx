@@ -3,7 +3,7 @@ import { StyledButton } from "./styled/Buttons/Button.styled";
 import SvgIconLoader from "./SvgIconLoader";
 
 interface ButtonProps {
-  color: "primary" | "secondary";
+  color: "primary" | "secondary" | "team_admin";
   children?: ReactNode;
   icon?: string;
 }
