@@ -7,7 +7,7 @@ interface StyledMarketOverviewTopProps {
 export const StyledMarketOverview = styled.div`
   background: #ffffff;
   border-radius: 16px;
-  max-width: 410px;
+  max-width: 335px;
   margin-inline: auto;
 `;
 
