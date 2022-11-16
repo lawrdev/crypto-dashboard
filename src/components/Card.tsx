@@ -3,10 +3,10 @@ import { StyledCard } from "./styled/Cards/Card.styled";
 
 interface CardProps {
   children: ReactNode;
-  variant?: string;
+  variant?: "default" | "custom";
 }
-function Card({ children, variant }: CardProps) {
-  return <StyledCard variant={variant}>{children}</StyledCard>;
+function Card({ children, variant = "default" }: CardProps) {
+  return <StyledCard $variant={variant}>{children}</StyledCard>;
 }
 
 export default Card;
