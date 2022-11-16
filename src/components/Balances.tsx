@@ -23,18 +23,22 @@ const balanceData: BalancesProps = {
 function Balances(props: BalancesProps) {
   return (
     <StyledCard $variant="default">
-      <StyledCardHeader>
-        <StyledCardTitle>Balances</StyledCardTitle>
-
-        <Button color="primary" icon="plus" />
-      </StyledCardHeader>
       <StyledCardBalances>
+        <StyledCardHeader>
+          <StyledCardTitle>Balances</StyledCardTitle>
+
+          <Button color="secondary" icon="plus" />
+        </StyledCardHeader>
+
         <StyledCardBalancesCurrency>
-          <SvgIconLoader iconName="dollar_sign" />
-          Dollar
+          <div>
+            <SvgIconLoader iconName="dollar_sign" />
+            Dollar
+          </div>
+          <p>{balanceData.data?.value}</p>
         </StyledCardBalancesCurrency>
-        <p>{balanceData.data?.value}</p>
       </StyledCardBalances>
+
       <StyledCardBalancesBody>
         <img alt="credit card" src={Img} />
       </StyledCardBalancesBody>
