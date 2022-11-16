@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { StyledButtonImage } from "./styled/ButtonImage.styled";
+import { StyledButtonImage } from "./styled/Buttons/ButtonImage.styled";
 
 interface ButtonImageProps {
   img: string;
