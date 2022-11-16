@@ -9,7 +9,7 @@ export const StyledCard = styled.div<CardProps>`
   border-radius: 16px;
   padding: 24px;
 
-  max-width: ${(props) => (props.$variant === "default" ? "410px" : "100%")};
+  max-width: ${(props) => (props.$variant === "default" ? "335px" : "100%")};
 
   width: 100%;
   margin-inline: auto;
