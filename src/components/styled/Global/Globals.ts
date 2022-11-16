@@ -24,7 +24,10 @@ const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         font-size: 18px;
         line-height: 23px;
+        cursor: default !important;
     }
+
+    section { margin-bottom: 24px }
 `;
 
 export default GlobalStyles;
