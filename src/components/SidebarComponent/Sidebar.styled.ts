@@ -61,6 +61,13 @@ export const StyledSidebarOptions = styled.nav`
 
   margin-inline: 10px;
 
+  a {
+    &:hover {
+      background: #33333305;
+      border-radius: 12px;
+    }
+  }
+
   @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
     margin-inline: 20px;
   }
@@ -68,6 +75,7 @@ export const StyledSidebarOptions = styled.nav`
 
 export const StyledSidebarOption = styled.div<StyledSidebarOptionProps>`
   padding: 12px;
+  width: 100%;
 
   display: flex;
   align-items: center;
@@ -86,11 +94,6 @@ export const StyledSidebarOption = styled.div<StyledSidebarOptionProps>`
       props.$activeItem
         ? props.theme.colors.green500
         : props.theme.colors.text900};
-  }
-
-  &:hover {
-    background: #33333305;
-    border-radius: 12px;
   }
 
   @media (min-width: ${(props) => props.theme.breakpoints.md}) {
