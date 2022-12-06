@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import SvgIconLoader from "../../SvgIconLoader";
+import SvgIconLoader from "../../shared/SvgIconLoader/SvgIconLoader";
 import {
   StyledHeaderDesktop,
   StyledProfile,

@@ -7,7 +7,7 @@ export const StyledHeaderDesktop = styled.header`
   align-items: center;
   justify-content: end;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     justify-content: space-between;
   }
 `;
@@ -59,7 +59,7 @@ export const StyledSearchInput = styled.input.attrs({ type: "text" })`
     border: 0;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
     width: 20vw;
   }
 `;
