@@ -2,7 +2,7 @@ import {
   StyledSidebarProtect,
   StyledSidebarProtectIcon,
 } from "../Sidebar.styled";
-import SvgIconLoader from "../../SvgIconLoader";
+import SvgIconLoader from "../../shared/SvgIconLoader/SvgIconLoader";
 
 function Protect() {
   return (
