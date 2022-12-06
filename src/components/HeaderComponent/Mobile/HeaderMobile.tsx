@@ -6,9 +6,9 @@ import {
 import Logo from "../../../assets/img/logo.png";
 import Avatar from "@mui/material/Avatar";
 import Person from "../../../assets/img/person.png";
-import { ButtonImage } from "../../ButtonImage";
-import SvgIconLoader from "../../SvgIconLoader";
-import Divider from "../../Divider";
+import { ButtonImage } from "../../shared/Buttons/ButtonImage";
+import SvgIconLoader from "../../shared/SvgIconLoader/SvgIconLoader";
+import Divider from "../../shared/Divider/Divider";
 import dayjs from "dayjs";
 
 export default function HeaderMobile() {
