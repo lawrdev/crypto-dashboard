@@ -1,14 +1,20 @@
 import { DefaultTheme } from "styled-components";
 
 export const theme: DefaultTheme = {
-  borderRadius: "8px",
+  borderRadius: {
+    xs: "2px",
+    sm: "4px",
+    md: "8px",
+  },
 
   colors: {
     body: "#EFF3FD",
+    sidebarColor: "#fff",
 
     // text colors
     text900: "#00261c",
     text700: "#707EAE",
+    text600: "#AEB6CF",
     text400: "#333333",
 
     // btn colors
@@ -23,5 +29,12 @@ export const theme: DefaultTheme = {
     // team admin btn
     purple500: "#783EFD",
     purple700: "#3d02c4",
+  },
+
+  breakpoints: {
+    xs: "0px",
+    sm: "600px",
+    md: "900px",
+    lg: "1200px",
   },
 };
