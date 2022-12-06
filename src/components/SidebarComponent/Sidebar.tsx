@@ -1,6 +1,6 @@
 import { SetStateAction, Dispatch } from "react";
 import { NavLink } from "react-router-dom";
-import { ButtonImage } from "../ButtonImage";
+import { ButtonImage } from "../shared/Buttons/ButtonImage";
 import {
   StyledSidebar,
   StyledSidebarHeader,
@@ -10,8 +10,8 @@ import {
   StyledSidebarTop,
 } from "./Sidebar.styled";
 import Logo from "../../assets/img/logo.png";
-import Divider from "../Divider";
-import SvgIconLoader from "../SvgIconLoader";
+import Divider from "../shared/Divider/Divider";
+import SvgIconLoader from "../shared/SvgIconLoader/SvgIconLoader";
 // import Protect from "./protect/Protect";
 import Box from "@mui/material/Box";
 import Tooltip from "@mui/material/Tooltip";

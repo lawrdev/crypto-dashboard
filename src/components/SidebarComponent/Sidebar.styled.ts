@@ -19,7 +19,7 @@ export const StyledSidebar = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     display: none;
   }
 `;
@@ -68,7 +68,7 @@ export const StyledSidebarOptions = styled.nav`
     }
   }
 
-  @media (min-width: ${(props) => props.theme.breakpoints.lg}) {
+  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
     margin-inline: 20px;
   }
 `;
@@ -96,7 +96,7 @@ export const StyledSidebarOption = styled.div<StyledSidebarOptionProps>`
         : props.theme.colors.text900};
   }
 
-  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
+  @media (min-width: ${(props) => props.theme.breakpoints.sm}) {
     width: fit-content;
   }
 `;
