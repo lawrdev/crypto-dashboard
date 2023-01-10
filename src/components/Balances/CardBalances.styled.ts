@@ -17,14 +17,14 @@ export const StyledCardBalancesCurrency = styled.div`
     font-size: 16px;
     line-height: 19px;
     letter-spacing: 0.016em;
-    color: ${(props) => props.theme.colors.text900};
+    color: ${(props) => props.theme.sc.colors.text900};
   }
 
   p {
     font-weight: 700;
     font-size: 34px;
     line-height: 41px;
-    color: ${(props) => props.theme.colors.blue500};
+    color: ${(props) => props.theme.sc.colors.blue500};
   }
 `;
 
