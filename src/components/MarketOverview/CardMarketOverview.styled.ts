@@ -5,18 +5,20 @@ interface StyledMarketOverviewTopProps {
 }
 
 export const StyledMarketOverview = styled.div`
+  padding-top: 16px;
+
   background: #ffffff;
   border-radius: 16px;
-  min-width: 285px;
-  max-height: 386px;
+  /* min-width: 285px;
+  max-height: 386px; */
   overflow: hidden;
 
-  margin-inline: auto;
+  /* margin-inline: auto; */
 `;
 
 export const StyledMarketOverviewTop = styled.div<StyledMarketOverviewTopProps>`
-  margin-bottom: 20px;
-  padding: 24px;
+  /* margin-bottom: 20px; */
+  padding-inline: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,7 +30,7 @@ export const StyledMarketOverviewTop = styled.div<StyledMarketOverviewTopProps>`
     letter-spacing: -0.02em;
     color: ${(props) =>
       props.growth > 0
-        ? props.theme.colors.green500
-        : props.theme.colors.pink500};
+        ? props.theme.sc.colors.green500
+        : props.theme.sc.colors.pink500};
   }
 `;
