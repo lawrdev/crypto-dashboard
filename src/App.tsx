@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
-import { theme } from "./theme/StyledTheme";
+import { theme } from "./theme/theme";
 import GlobalStyles from "./theme/Globals";
 import DashBoard from "./pages/DashBoard/DashBoard";
 import Layout from "./layout/Layout";
