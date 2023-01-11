@@ -3,7 +3,7 @@ import {
   StyledCard,
   StyledCardHeader,
   StyledCardTitle,
-} from "../shared/Card/Card.styled";
+} from "../shared/Card/ComponentCard/Card.styled";
 import {
   StyledCardBalances,
   StyledCardBalancesCurrency,
