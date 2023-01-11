@@ -7,7 +7,7 @@ export const StyledHeaderDesktop = styled.header`
   align-items: center;
   justify-content: end;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (min-width: ${({ theme }) => theme.sc.breakpoints.md}) {
     justify-content: space-between;
   }
 `;
@@ -20,20 +20,20 @@ export const StyledWelcome = styled.data`
   gap: 4px;
 
   h2 {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 23px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
     letter-spacing: 0.016em;
 
-    color: ${({ theme }) => theme.colors.text900};
+    color: ${({ theme }) => theme.sc.colors.text900};
   }
 
   p {
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 19px;
     letter-spacing: -0.02em;
-    color: ${({ theme }) => theme.colors.text700};
+    color: ${({ theme }) => theme.sc.colors.text700};
   }
 `;
 
@@ -47,11 +47,11 @@ export const StyledSearchWrapper = styled.div`
   gap: 8px;
 
   background: #ffffff;
-  border-radius: ${({ theme }) => theme.borderRadius.md};
+  border-radius: ${({ theme }) => theme.sc.borderRadius.md};
 `;
 export const StyledSearchInput = styled.input.attrs({ type: "text" })`
   border: 0;
-  color: ${({ theme }) => theme.colors.text600};
+  color: ${({ theme }) => theme.sc.colors.text600};
   width: 175px;
 
   &:focus {
@@ -59,7 +59,7 @@ export const StyledSearchInput = styled.input.attrs({ type: "text" })`
     border: 0;
   }
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+  @media (min-width: ${({ theme }) => theme.sc.breakpoints.md}) {
     width: 20vw;
   }
 `;
@@ -96,6 +96,6 @@ export const StyledProfile = styled.div`
     line-height: 16px;
     letter-spacing: 0.016em;
 
-    color: ${({ theme }) => theme.colors.text900};
+    color: ${({ theme }) => theme.sc.colors.text900};
   }
 `;
