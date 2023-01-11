@@ -54,7 +54,7 @@ export const StyledHeaderMobileBottom = styled.div`
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.016em;
-    color: ${({ theme }) => theme.colors.text900};
+    color: ${({ theme }) => theme.sc.colors.text900};
   }
 
   span {
@@ -62,6 +62,6 @@ export const StyledHeaderMobileBottom = styled.div`
     font-size: 14px;
     line-height: 16px;
     letter-spacing: -0.02em;
-    color: ${({ theme }) => theme.colors.text700};
+    color: ${({ theme }) => theme.sc.colors.text700};
   }
 `;
