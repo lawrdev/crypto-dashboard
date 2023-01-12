@@ -27,7 +27,7 @@ export const StyledRecentActivitiesItemCol = styled.div`
   font-size: 14px;
   line-height: 17px;
   letter-spacing: -0.02em;
-  color: ${(props) => props.theme.colors.text700};
+  color: ${(props) => props.theme.sc.colors.text700};
 
   width: 50%;
 `;
@@ -40,6 +40,6 @@ export const StyledRecentActivitiesItemCol2 = styled.div<StyledRecentActivitiesR
   letter-spacing: -0.02em;
   color: ${(props) =>
     props.$type === "status"
-      ? props.theme.colors.green500
-      : props.theme.colors.text700};
+      ? props.theme.sc.colors.green500
+      : props.theme.sc.colors.text700};
 `;
