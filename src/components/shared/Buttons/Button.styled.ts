@@ -6,10 +6,10 @@ interface StyledButtonProps {
 export const StyledButton = styled.button<StyledButtonProps>`
   background-color: ${(props) =>
     props.$color === "primary"
-      ? props.theme.colors.green500
+      ? props.theme.sc.colors.green500
       : props.$color === "secondary"
-      ? props.theme.colors.blue500
-      : props.theme.colors.purple500};
+      ? props.theme.sc.colors.blue500
+      : props.theme.sc.colors.purple500};
   padding: 10px 9.5px;
   display: flex;
   align-items: center;
@@ -32,10 +32,10 @@ export const StyledButton = styled.button<StyledButtonProps>`
   &:hover {
     background-color: ${(props) =>
       props.$color === "primary"
-        ? props.theme.colors.green700
+        ? props.theme.sc.colors.green700
         : props.$color === "secondary"
-        ? props.theme.colors.blue700
-        : props.theme.colors.purple700};
+        ? props.theme.sc.colors.blue700
+        : props.theme.sc.colors.purple700};
   }
 
   &:active {
