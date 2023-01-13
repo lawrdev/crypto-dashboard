@@ -13,13 +13,13 @@ export const StyledSidebar = styled.div`
   padding-block: 22px;
   padding-inline: 8px;
 
-  background-color: ${(props) => props.theme.colors.sidebarColor};
+  background-color: ${(props) => props.theme.sc.colors.sidebarColor};
   border-right: 1px solid rbg(219, 219, 219);
 
   display: flex;
   flex-direction: column;
 
-  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media (max-width: ${(props) => props.theme.sc.breakpoints.sm}) {
     display: none;
   }
 `;
@@ -44,12 +44,12 @@ export const StyledSidebarHeader = styled.div`
 
     h2 {
       font-weight: 700;
-      font-size: 22px;
-      line-height: 26px;
+      font-size: 20px;
+      line-height: 24px;
       letter-spacing: 0.016em;
 
       /* Stroke 2nd */
-      color: ${({ theme }) => theme.colors.text900};
+      color: ${({ theme }) => theme.sc.colors.text900};
     }
   }
 `;
@@ -59,7 +59,7 @@ export const StyledSidebarOptions = styled.nav`
   flex-direction: column;
   gap: 16px;
 
-  margin-inline: 10px;
+  margin-inline: 1px;
 
   a {
     &:hover {
@@ -68,8 +68,8 @@ export const StyledSidebarOptions = styled.nav`
     }
   }
 
-  @media (min-width: ${(props) => props.theme.breakpoints.md}) {
-    margin-inline: 20px;
+  @media (min-width: ${(props) => props.theme.sc.breakpoints.md}) {
+    margin-inline: 2px;
   }
 `;
 
@@ -86,17 +86,17 @@ export const StyledSidebarOption = styled.div<StyledSidebarOptionProps>`
 
   p {
     font-weight: ${(props) => (props.$activeItem ? 700 : 500)};
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 16px;
+    line-height: 18px;
     letter-spacing: 0.016em;
 
     color: ${(props) =>
       props.$activeItem
-        ? props.theme.colors.green500
-        : props.theme.colors.text900};
+        ? props.theme.sc.colors.green500
+        : props.theme.sc.colors.text900};
   }
 
-  @media (min-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media (min-width: ${(props) => props.theme.sc.breakpoints.sm}) {
     width: fit-content;
   }
 `;
@@ -106,7 +106,7 @@ export const StyledSidebarOptionActive = styled.span`
   width: 8px;
   height: 8px;
 
-  background-color: ${(props) => props.theme.colors.green500};
+  background-color: ${(props) => props.theme.sc.colors.green500};
 `;
 
 export const StyledSidebarProtect = styled.div`
@@ -147,7 +147,7 @@ export const StyledSidebarProtect = styled.div`
     letter-spacing: -0.02em;
 
     /* Colors/Grey/900 */
-    color: ${(props) => props.theme.colors.text900};
+    color: ${(props) => props.theme.sc.colors.text900};
   }
 
   h3 {
