@@ -16,8 +16,8 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body {
-        background: ${({ theme }) => theme.colors.body};
-        color: ${({ theme }) => theme.colors.text900};
+        background: ${({ theme }) => theme.sc.colors.body};
+        color: ${({ theme }) => theme.sc.colors.text900};
 
         height: 100vh;
         margin: 0;
