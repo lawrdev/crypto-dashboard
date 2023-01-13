@@ -1,6 +1,6 @@
 import Button from "../shared/Buttons/Button";
-import Card from "../shared/Card/Card";
-import { StyledCardHeader, StyledCardTitle } from "./shared/Card/Card.styled";
+import Card from "../shared/Card/ComponentCard/Card";
+// import { StyledCardHeader, StyledCardTitle } from "./shared/Card/Card.styled";
 import {
   StyledCardTeam,
   StyledCardTeamAdmin,
@@ -19,9 +19,9 @@ const data: DataProps = {
 function Team() {
   return (
     <Card variant="default">
-      <StyledCardHeader>
+      {/* <StyledCardHeader>
         <StyledCardTitle>Team</StyledCardTitle>
-      </StyledCardHeader>
+      </StyledCardHeader> */}
 
       <StyledCardTeam>
         <StyledCardTeamAdmin>
