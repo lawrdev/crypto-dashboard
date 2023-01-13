@@ -23,7 +23,7 @@ export const StyledCardTeamAdmin = styled.div`
       line-height: 21px;
       letter-spacing: 0.016em;
 
-      color: ${(props) => props.theme.colors.text900};
+      color: ${(props) => props.theme.sc.colors.text900};
     }
     p {
       font-weight: 400;
@@ -31,7 +31,7 @@ export const StyledCardTeamAdmin = styled.div`
       line-height: 14px;
       letter-spacing: -0.02em;
 
-      color: ${(props) => props.theme.colors.text400};
+      color: ${(props) => props.theme.sc.colors.text400};
     }
   }
 `;
@@ -52,7 +52,7 @@ export const StyledCardTeamMember = styled.div`
       line-height: 21px;
       letter-spacing: 0.016em;
 
-      color: ${(props) => props.theme.colors.text900};
+      color: ${(props) => props.theme.sc.colors.text900};
     }
     p {
       font-weight: 400;
@@ -60,7 +60,7 @@ export const StyledCardTeamMember = styled.div`
       line-height: 14px;
       letter-spacing: -0.02em;
 
-      color: ${(props) => props.theme.colors.text400};
+      color: ${(props) => props.theme.sc.colors.text400};
     }
   }
 `;
