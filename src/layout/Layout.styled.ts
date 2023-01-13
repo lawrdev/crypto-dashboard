@@ -17,7 +17,7 @@ export const StyledLayout = styled.div`
     overflow-y: auto;
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.sm}) {
+  @media screen and (min-width: ${(props) => props.theme.sc.breakpoints.sm}) {
     grid-template-columns: fit-content(15%) 1fr;
 
     grid-template-areas:
@@ -29,9 +29,9 @@ export const StyledLayout = styled.div`
     grid-gap: 12px;
   }
 
-  @media screen and (min-width: ${(props) => props.theme.breakpoints.md}) {
-    grid-template-columns: 226px 1fr;
+  @media screen and (min-width: ${(props) => props.theme.sc.breakpoints.md}) {
+    grid-template-columns: 196px 1fr;
 
-    grid-gap: 32px;
+    grid-gap: 22px;
   }
 `;
