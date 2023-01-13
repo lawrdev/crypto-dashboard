@@ -1,5 +1,8 @@
-import Card from "../shared/Card/Card";
-import { StyledCardHeader, StyledCardTitle } from "../shared/Card/Card.styled";
+import Card from "../shared/Card/ComponentCard/Card";
+import {
+  StyledCardHeader,
+  StyledCardTitle,
+} from "../shared/Card/ComponentCard/Card.styled";
 import {
   StyledCardRecentActivities,
   StyledRecentActivitiesItemCol,
