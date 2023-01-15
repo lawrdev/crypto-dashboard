@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledWrapper = styled.div`
   /* max-width: 255px; */
   /* width: fit-content; */
-  padding: 16px;
+  padding: 14px;
   background: #ffffff;
   border-radius: 16px;
 
@@ -13,12 +13,11 @@ export const StyledWrapper = styled.div`
   gap: 16px;
 
   cursor: pointer;
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  box-shadow: ${({ theme }) => theme.sc.bs.normal};
   transition-duration: 300ms;
 
   &:hover {
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    box-shadow: ${({ theme }) => theme.sc.bs.large};
   }
 `;
 
@@ -31,8 +30,8 @@ export const StyledCoinDets = styled.div`
 `;
 
 export const StyledImageWrapper = styled.div`
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 
   border-radius: 8px;
 
@@ -45,7 +44,7 @@ export const StyledImageWrapper = styled.div`
 
 export const StyledCoinCompare = styled.p`
   font-weight: 500;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1px;
   letter-spacing: 0.016em;
   /* Colors/Dark Grey/400 */
@@ -59,8 +58,8 @@ export const StyledCoinCompare = styled.p`
 `;
 export const StyledCoinValue = styled.p`
   font-weight: 600;
-  font-size: 18px;
-  line-height: 10px;
+  font-size: 16px;
+  line-height: 6px;
   letter-spacing: 0.016em;
   /* Colors/Green/900 */
 
@@ -69,7 +68,7 @@ export const StyledCoinValue = styled.p`
 export const StyledCoinValueAvgGain = styled.p`
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 12px;
   letter-spacing: -0.02em;
 
   /* Colors/Green/500 - Primary */
@@ -89,8 +88,8 @@ export const StyledCoinValueAvgLoss = styled.p`
 
 export const StyledCoinChart = styled.div`
   /* flex-grow: 1; */
-  height: 56px;
-  min-width: 104px;
+  height: 30px;
+  min-width: 54px;
 
   img {
     width: 100%;
