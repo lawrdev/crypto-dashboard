@@ -29,7 +29,7 @@ export const StyledLayout = styled.div`
     grid-gap: 12px;
   }
 
-  @media screen and (min-width: ${(props) => props.theme.sc.breakpoints.md}) {
+  @media screen and (min-width: ${(props) => props.theme.sc.breakpoints.lg}) {
     grid-template-columns: 196px 1fr;
 
     grid-gap: 22px;
