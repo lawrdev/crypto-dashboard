@@ -80,7 +80,7 @@ function Sidebar() {
           <StyledSidebarHeader>
             <div className="logo">
               <ButtonImage image={Logo} alt="logo" />
-              <Box sx={{ display: { xs: "none", md: "block" } }}>
+              <Box sx={{ display: { xs: "none", lg: "block" } }}>
                 <h2>ZARVIS</h2>
               </Box>
             </div>
@@ -101,12 +101,12 @@ function Sidebar() {
                       </div>
                     </Tooltip>
 
-                    <Box sx={{ display: { xs: "none", md: "block" } }}>
+                    <Box sx={{ display: { xs: "none", lg: "block" } }}>
                       <p>{item.item}</p>
                     </Box>
 
                     {isActive ? (
-                      <Box sx={{ display: { xs: "none", md: "block" } }}>
+                      <Box sx={{ display: { xs: "none", lg: "block" } }}>
                         <StyledSidebarOptionActive></StyledSidebarOptionActive>
                       </Box>
                     ) : null}
