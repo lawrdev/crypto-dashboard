@@ -1,6 +1,7 @@
 import CoinCard from "../shared/Card/CoinCard/CoinCard";
 import {
   StyledCoinWrapper,
+  StyledGrid,
   StyledMarketandBalance,
   StyledWrapper,
 } from "./Dashboard.styled";
@@ -51,25 +52,25 @@ const data: DataProps[] = [
 function DashBoardLayout() {
   return (
     <StyledWrapper>
-      <StyledCoinWrapper>
-        {/* IMPLEMENT SWIPER JS */}
+      <StyledGrid>
+        <StyledCoinWrapper>
+          {data.map((item, index: number) => (
+            <CoinCard
+              key={index}
+              image={item.image}
+              gain={item.gain}
+              coin={item.coin}
+              value={item.value}
+              valueAvg={item.valueAvg}
+            />
+          ))}
+          {/* reinvent card to accept title */}
+        </StyledCoinWrapper>
 
-        {data.map((item, index: number) => (
-          <CoinCard
-            key={index}
-            image={item.image}
-            gain={item.gain}
-            coin={item.coin}
-            value={item.value}
-            valueAvg={item.valueAvg}
-          />
-        ))}
-        {/* reinvent card to accept title */}
-      </StyledCoinWrapper>
-
-      <StyledMarketandBalance>
-        <MarketOverview />
-      </StyledMarketandBalance>
+        <StyledMarketandBalance>
+          <MarketOverview />
+        </StyledMarketandBalance>
+      </StyledGrid>
     </StyledWrapper>
   );
 }
