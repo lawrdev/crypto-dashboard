@@ -42,6 +42,11 @@ interface CustomTheme {
       md: string;
       lg: string;
     };
+
+    bs: {
+      normal: string;
+      large: string;
+    };
   };
 }
 
