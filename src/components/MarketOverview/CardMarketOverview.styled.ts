@@ -9,19 +9,15 @@ export const StyledMarketOverview = styled.div`
 
   background: #ffffff;
   border-radius: 16px;
-  /* min-width: 285px;
-  max-height: 386px; */
   overflow: hidden;
-
-  /* margin-inline: auto; */
 `;
 
 export const StyledMarketOverviewTop = styled.div<StyledMarketOverviewTopProps>`
-  /* margin-bottom: 20px; */
   padding-inline: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  -moz-box-align: center;
 
   .marketcap {
     font-weight: 500;
@@ -33,4 +29,13 @@ export const StyledMarketOverviewTop = styled.div<StyledMarketOverviewTopProps>`
         ? props.theme.sc.colors.green500
         : props.theme.sc.colors.pink500};
   }
+`;
+
+export const StyledChartWrapper = styled.div`
+  margin-top: 40px;
+  min-width: 100%;
+  max-height: 386px;
+  height: clamp(220px, 20vw, 390px);
+
+  position: relative;
 `;
