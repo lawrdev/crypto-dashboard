@@ -2,16 +2,21 @@ import { useState } from "react";
 import Graph_mobile_y from "../assets/img/graph_growth_yes.png";
 import { StyledCardTitle } from "../shared/Card/ComponentCard/Card.styled";
 import {
+  StyledChartWrapper,
   StyledMarketOverview,
   StyledMarketOverviewTop,
 } from "./CardMarketOverview.styled";
-import { StyledChart } from "../shared/Chart/Chart.styled";
 import { Box, Button } from "@mui/material";
 import { Theme, useTheme } from "@mui/material/styles";
-import OutlinedInput from "@mui/material/OutlinedInput";
-import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
 interface DataProps {
   value: number;
@@ -23,16 +28,6 @@ const data: DataProps = {
   growth: -25,
 };
 
-const ITEM_HEIGHT = 48;
-const ITEM_PADDING_TOP = 8;
-const MenuProps = {
-  PaperProps: {
-    style: {
-      maxHeight: ITEM_HEIGHT * 4.5 + ITEM_PADDING_TOP,
-      width: 250,
-    },
-  },
-};
 const names = [
   "Oliver Hansen",
   "Van Henry",
@@ -54,79 +49,136 @@ function getStyles(name: string, personName: readonly string[], theme: Theme) {
   };
 }
 
+const chartData = [
+  {
+    name: "Page A",
+    uv: 4000,
+    pv: 2400,
+    amt: 2400,
+  },
+  {
+    name: "Page B",
+    uv: 3000,
+    pv: 1398,
+    amt: 2210,
+  },
+  {
+    name: "Page C",
+    uv: 2000,
+    pv: 9800,
+    amt: 2290,
+  },
+  {
+    name: "Page D",
+    uv: 2780,
+    pv: 3908,
+    amt: 2000,
+  },
+  {
+    name: "Page E",
+    uv: 1890,
+    pv: 4800,
+    amt: 2181,
+  },
+  {
+    name: "Page F",
+    uv: 2390,
+    pv: 3800,
+    amt: 2500,
+  },
+  {
+    name: "Page G",
+    uv: 3490,
+    pv: 4300,
+    amt: 2100,
+  },
+];
+
 function MarketOverview() {
   const theme = useTheme();
   console.log("coolv", theme.palette.secondary);
-  const [personName, setPersonName] = useState<string[]>([]);
 
-  const handleChange = (event: SelectChangeEvent<typeof personName>) => {
-    const {
-      target: { value },
-    } = event;
-    setPersonName(
-      // On autofill we get a stringified value.
-      typeof value === "string" ? value.split(",") : value
-    );
-  };
+  // FIX HORISONTALL VALUES AND REMOVE H & L DESCRIPTORS
 
   return (
-    <div>
-      {/* flex grow and grid */}
-      <StyledMarketOverview>
-        <StyledMarketOverviewTop growth={data.growth}>
-          <div>
-            <StyledCardTitle>Market Overview</StyledCardTitle>
-            <p className="marketcap">{`${data.value}(${data.growth}%)`}</p>
-          </div>
+    <StyledMarketOverview>
+      <StyledMarketOverviewTop growth={data.growth}>
+        <div>
+          <StyledCardTitle>Market Overview</StyledCardTitle>
+          <p className="marketcap">{`${data.value}(${data.growth}%)`}</p>
+        </div>
 
-          <Box sx={{ display: { xs: "block", md: "none" } }}>
-            <FormControl sx={{ m: 1, width: 300, mt: 3 }}>
-              <Select
-                multiple
-                displayEmpty
-                value={personName}
-                onChange={handleChange}
-                input={<OutlinedInput />}
-                renderValue={(selected) => {
-                  if (selected.length === 0) {
-                    return <em>Placeholder</em>;
-                  }
+        <Box>
+          <Button color="primary" variant="contained">
+            ALL
+          </Button>
+        </Box>
+      </StyledMarketOverviewTop>
+      {/* TODO:: reCharts */}
+      <StyledChartWrapper>
+        <ResponsiveContainer width="100%" height="100%">
+          <AreaChart
+            width={500}
+            height={400}
+            data={chartData}
+            margin={{
+              top: 10,
+              right: 30,
+              left: 0,
+              bottom: 0,
+            }}
+          >
+            <defs>
+              <linearGradient id="colorValue1" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="-5.32%" stopColor="#5A55D2" stopOpacity={0.8} />
+                <stop offset="92.18%" stopColor="#5A55D230" stopOpacity={0.0} />
+              </linearGradient>
+            </defs>
+            <defs>
+              <linearGradient id="colorValue2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5.32%" stopColor="#00DEA3" stopOpacity={0.8} />
+                <stop offset="92.18%" stopColor="#00DEA330" stopOpacity={0.0} />
+              </linearGradient>
+            </defs>
 
-                  return selected.join(", ");
-                }}
-                MenuProps={MenuProps}
-                inputProps={{ "aria-label": "Without label" }}
-              >
-                <MenuItem disabled value="">
-                  <em>Placeholder</em>
-                </MenuItem>
-                {names.map((name) => (
-                  <MenuItem
-                    key={name}
-                    value={name}
-                    style={getStyles(name, personName, theme)}
-                  >
-                    {name}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
-          </Box>
-          <Box sx={{ display: { xs: "none", md: "block" } }}>
-            <Button color="primary" variant="contained">
-              ALL
-            </Button>
-          </Box>
-        </StyledMarketOverviewTop>
-
-        {/* TODO:: reCharts */}
-        {/* <StyledChart>
-          <div>
-            <img alt="graph" src={Graph_mobile_y} />
-          </div>
-        </StyledChart> */}
-      </StyledMarketOverview>
-    </div>
+            <CartesianGrid
+              opacity={0.5}
+              vertical={false}
+              horizontal={false}
+              strokeDasharray="3 3"
+            />
+            <XAxis dataKey="name" />
+            <YAxis />
+            <Tooltip />
+            <Area
+              type="monotone"
+              dataKey="uv"
+              stackId="1"
+              strokeWidth={2}
+              stroke="#5A55D2"
+              // fill="#8884d8"
+              fill="url(#colorValue1)"
+            />
+            <Area
+              type="monotone"
+              dataKey="pv"
+              stackId="1"
+              strokeWidth={2}
+              stroke="#00DEA3"
+              // fill="#82ca9d"
+              fill="url(#colorValue2)"
+            />
+            {/* <Area
+              type="monotone"
+              dataKey="amt"
+              stackId="1"
+              stroke="#ffc658"
+              fill="#ffc658"
+            /> */}
+          </AreaChart>
+        </ResponsiveContainer>
+      </StyledChartWrapper>
+    </StyledMarketOverview>
   );
 }
 
