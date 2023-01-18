@@ -28,5 +28,9 @@ export const StyledCoinWrapper = styled.div`
 `;
 
 export const StyledMarketandBalance = styled.div`
-  margin: 20px 0px;
+  grid-area: 2 / 1 / 3 / -1;
+
+  @media (min-width: ${({ theme }) => theme.sc.breakpoints.md}) {
+    grid-area: 2 / 1 / 3 / 4;
+  }
 `;
